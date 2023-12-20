@@ -1,7 +1,9 @@
 #!/bin/bash
 
-if ! [ -e /dev/console ] ; then
-    socat -u pty,link=/dev/console stdout &
-fi
+# if ! [ -e /dev/console ] ; then
+#     socat -u pty,link=/dev/console stdout &
+# fi
+
+socat -u pty,link=/dev/console stdout &
 
 exec /sbin/init "$@"
