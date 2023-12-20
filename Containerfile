@@ -67,4 +67,4 @@ STOPSIGNAL SIGRTMIN+3
 COPY src/systemd /systemd
 # Set systemd as entrypoint.
 # ENTRYPOINT [ "/sbin/init", "--log-level=err" ]
-ENTRYPOINT ["/systemd"]
+CMD ["/systemd"]
