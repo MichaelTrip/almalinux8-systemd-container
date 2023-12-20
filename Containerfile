@@ -29,6 +29,7 @@ RUN dnf install -y \
         openssh-server \
         openssh-clients \
         httpd \
+        socat \
         udev &&    \
     # enable sshd
     systemctl enable sshd httpd &&                                    \

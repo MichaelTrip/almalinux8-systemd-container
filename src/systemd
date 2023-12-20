@@ -1,3 +1,5 @@
+#!/bin/bash
+
 if ! [ -e /dev/console ] ; then
     socat -u pty,link=/dev/console stdout &
 fi
