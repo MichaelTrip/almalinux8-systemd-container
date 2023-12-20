@@ -33,6 +33,7 @@ RUN dnf install -y \
     systemctl unmask                                                  \
         systemd-remount-fs.service                                    \
         dev-hugepages.mount                                           \
+        sshd.service                                                  \
         sys-fs-fuse-connections.mount                                 \
         systemd-logind.service                                        \
         getty.target                                                  \
