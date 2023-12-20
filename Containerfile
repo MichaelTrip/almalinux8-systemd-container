@@ -44,6 +44,7 @@ RUN dnf install -y \
     # Prevents journald from reading kernel messages from /dev/kmsg
     echo "ReadKMsg=no" >> /etc/systemd/journald.conf &&               \
     echo "ForwardToConsole=yes" >> /etc/systemd/journald.conf &&      \
+    echo "ForwardToWall=yes" >> /etc/systemd/journald.conf &&         \
                                                                       \
     # Housekeeping
     dnf clean all &&                                                  \
