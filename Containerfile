@@ -25,7 +25,11 @@ RUN dnf install -y \
         kmod       \
         procps-ng  \
         sudo       \
+        openssh \
+        openssh-clients \
         udev &&    \
+    # enable ssh
+    systemctl enable sshd --now &&                                    \
     # Unmask services
     systemctl unmask                                                  \
         systemd-remount-fs.service                                    \
