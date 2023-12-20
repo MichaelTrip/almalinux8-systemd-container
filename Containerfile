@@ -47,7 +47,7 @@ RUN dnf install -y \
     dnf clean all &&                                                  \
     rm -rf                                                            \
        /var/cache/dnf/*                                               \
-       /var/log/*                                                     \
+    #    /var/log/*                                                     \
        /tmp/*                                                         \
        /var/tmp/*                                                     \
        /usr/share/doc/*                                               \
