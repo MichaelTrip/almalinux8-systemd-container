@@ -28,9 +28,10 @@ RUN dnf install -y \
         openssh \
         openssh-server \
         openssh-clients \
+        httpd \
         udev &&    \
     # enable sshd
-    systemctl enable sshd &&                                          \
+    systemctl enable sshd httpd &&                                    \
     # Unmask services
     systemctl unmask                                                  \
         systemd-remount-fs.service                                    \
