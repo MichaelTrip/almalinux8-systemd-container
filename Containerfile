@@ -46,7 +46,7 @@ RUN dnf install -y \
     echo "ForwardToConsole=yes" >> /etc/systemd/journald.conf &&      \
     echo "ForwardToWall=yes" >> /etc/systemd/journald.conf &&         \
     echo "TTYPath=/dev/console" >> /etc/systemd/journald.conf &&      \
-    echo "Storage=auto" >> /etc/systemd/journald.conf &&              \
+    echo "Storage=persistent" >> /etc/systemd/journald.conf &&              \
                                                                       \
     # Housekeeping
     dnf clean all &&                                                  \
