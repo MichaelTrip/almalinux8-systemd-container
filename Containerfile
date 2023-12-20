@@ -26,14 +26,15 @@ RUN dnf install -y \
         procps-ng  \
         sudo       \
         openssh \
+        openssh-server \
         openssh-clients \
         udev &&    \
     # enable ssh
+    systemctl enable sshd --now &&                                    \
     # Unmask services
     systemctl unmask                                                  \
         systemd-remount-fs.service                                    \
         dev-hugepages.mount                                           \
-        sshd.service                                                  \
         sys-fs-fuse-connections.mount                                 \
         systemd-logind.service                                        \
         getty.target                                                  \
