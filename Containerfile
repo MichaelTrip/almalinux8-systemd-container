@@ -61,7 +61,7 @@ RUN dnf install -y \
 # Make use of stopsignal (instead of sigterm) to stop systemd containers.
 STOPSIGNAL SIGRTMIN+3
 
-COPY src/systemd /systemd
+# COPY src/systemd /systemd
 # Set systemd as entrypoint.
-# ENTRYPOINT [ "/sbin/init", "--log-level=err" ]
-CMD ["/systemd"]
+ENTRYPOINT [ "/sbin/init", "--log-level=err" ]
+# CMD ["/systemd"]
