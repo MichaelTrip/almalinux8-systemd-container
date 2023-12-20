@@ -4,6 +4,10 @@
 #     socat -u pty,link=/dev/console stdout &
 # fi
 
-socat -u pty,link=/dev/console stdout &
+# socat -u pty,link=/dev/console stdout &
+
+#! /bin/bash
+export CONSOLE_FD
+exec {CONSOLE_FD}<> /dev/console
 
 exec /sbin/init "$@"
